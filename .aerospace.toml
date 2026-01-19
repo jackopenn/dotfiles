@@ -96,16 +96,16 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-comma = 'layout accordion horizontal vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    ctrl-h = 'focus left'
-    ctrl-j = 'focus down'
-    ctrl-k = 'focus up'
-    ctrl-l = 'focus right'
+     alt-h = 'focus left'
+     alt-j = 'focus down'
+     alt-k = 'focus up'
+     alt-l = 'focus right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
-    ctrl-shift-h = 'move left'
-    ctrl-shift-j = 'move down'
-    ctrl-shift-k = 'move up'
-    ctrl-shift-l = 'move right'
+    alt-shift-h = 'move left'
+    alt-shift-j = 'move down'
+    alt-shift-k = 'move up'
+    alt-shift-l = 'move right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#resize
     ctrl-minus = 'resize smart -50'
@@ -121,6 +121,8 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-7 = 'workspace 7'
     ctrl-8 = 'workspace 8'
     ctrl-9 = 'workspace 9'
+    # for secondary monitor
+    ctrl-s = 'workspace S'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     ctrl-shift-1 = 'move-node-to-workspace 1'
@@ -132,6 +134,8 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-shift-7 = 'move-node-to-workspace 7'
     ctrl-shift-8 = 'move-node-to-workspace 8'
     ctrl-shift-9 = 'move-node-to-workspace 9'
+    # for secondary monitor
+    ctrl-shift-s = 'move-node-to-workspace S'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     ctrl-tab = 'workspace-back-and-forth'
@@ -163,3 +167,4 @@ automatically-unhide-macos-hidden-apps = false
     down = 'volume down'
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
+
