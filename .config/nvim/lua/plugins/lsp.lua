@@ -2,10 +2,29 @@ return {
      {
         "neovim/nvim-lspconfig",
         dependencies = {
-            { "mason-org/mason.nvim", opts = {} },
-            { "mason-org/mason-lspconfig.nvim", opts = { ensure_installed = {"lua_ls", "pyright"} } }
+            "mason-org/mason.nvim",
+            "mason-org/mason-lspconfig.nvim",
         },
         config = function()
+            require("mason").setup()
+            require("mason-lspconfig").setup({
+                ensure_installed = { "lua_ls", "pyright" },
+                -- automatic_enable = true is the default, calls vim.lsp.enable() for installed servers
+            })
+
+            -- Configure pyright with venv detection
+            vim.lsp.config('pyright', {
+                on_init = function(client)
+                    local venv_path = client.config.root_dir .. "/.venv"
+                    if vim.fn.isdirectory(venv_path) == 1 then
+                        local python_path = venv_path .. "/bin/python"
+                        client.config.settings.python = client.config.settings.python or {}
+                        client.config.settings.python.pythonPath = python_path
+                        client:notify("workspace/didChangeConfiguration", { settings = client.config.settings })
+                    end
+                end,
+            })
+
             vim.diagnostic.config({
                 underline = true,
                 update_in_insert = true,
