@@ -6,7 +6,7 @@ Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 ```bash
 # Clone to home directory
-git clone <repo-url> ~/dotfiles
+git clone https://github.com/jackopenn/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 
 # Symlink everything to ~
