@@ -1,2 +1,5 @@
 theme = light:Rose Pine Dawn, dark:Rose Pine Moon
 shell-integration-features = ssh-terminfo,ssh-env
+auto-update-channel = tip
+bell-features = system
+
