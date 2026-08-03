@@ -96,10 +96,10 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-comma = 'layout accordion horizontal vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    ctrl-h = 'focus left'
-    ctrl-j = 'focus down'
-    ctrl-k = 'focus up'
-    ctrl-l = 'focus right'
+    ctrl-h = 'focus --ignore-floating left'
+    ctrl-j = 'focus --ignore-floating down'
+    ctrl-k = 'focus --ignore-floating up'
+    ctrl-l = 'focus --ignore-floating right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
     ctrl-shift-h = 'move left'
